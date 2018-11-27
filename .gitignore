@@ -1,1 +1,7 @@
 virtual/
+ *.pyc
+
+.start.sh
+.vscode/
+.psycode/
+__pycache__

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8"> {% if title %}
+    <title> {{ title }}</title>
+    {% else %}
+    <title> WEBHOST </title>
+    {% endif %}
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Noto+Sans+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Noto+Sans+SC|Pacifico" rel="stylesheet"></head>
+{% extends 'base.html'%} {% import "bootstrap/wtf.html" as wtf %}
+
+<body>
+
+        {% block styles%}
+        {{ super() }}
+        <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+        {% endblock %}
+        
+
+    {% block content %}
+
+    <div class="well">
+        <H1 style="font-family:sans-serif;text-align: center;color: blueviolet;"> WEBHOST!!!!</H1>
+
+    </div>
+    <div class="container" style="background-color:rgb(235,230,160);color:#3A005C">
+        <h3 style="text-align:center">We host your webs here.</h3>
+        <nav class="navbar navbar-default" role="navigation" style="text-align:center;">
+
+            
+        </nav> 
+
+        <div id="category" style="text-align: center">
+            <h2>Time to add links</h2>
+            <a class="btn btn-primary text-center " href="{{url_for('main.new_post')}}"><span ></span>Add any sites link</a>
+            <hr>
+          
+            <h3> Links Available:</h3>
+          
+            {% for post in posts %}
+    <div class="row col-md-12">
+                <div class=" row col-md-6 panel panel-primary" style="margin-right: 30%; margin-left: 30%">
+                    <div class=" panel-heading">
+                      <h3 class="panel-title">{{post.post_title}}</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p class='firstletter'>{{post.post_text}}</p>
+                    </div>
+                    {% if current_user.is_authenticated %}
+                    <div class="panel-footer">
+                      <a class="btn btn-success text-center" href="{{url_for('main.view_post', id=post.id)}}">View Comments</a>
+                      <a class="btn btn-warning text-center" href="{{url_for('main.update_post', id=post.id)}}">Update Link</a>
+                      <a class="btn btn-danger text-center" href="{{url_for('main.delete_post', id=post.id)}}">Delete Link</a>
+                    </div>
+                  
+                    {% else %}
+                    <div class="panel-footer"><a class="btn btn-primary text-center" href="{{url_for('main.view_post', id=post.id)}}">View Comments</a></div>
+                    {%endif%}
+                </div>
+    </div>
+
+            {% endfor %}
+          
+          {% endblock %}
+          

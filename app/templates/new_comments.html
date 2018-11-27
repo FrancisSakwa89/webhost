@@ -1,0 +1,9 @@
+{% import "bootstrap/wtf.html" as wtf %} {% extends 'base.html'%} {% block content %}
+
+<div class="well" style="width:50%">
+
+    <p style = "text-align:center;">{{ wtf.quick_form(form) }}</p>
+
+</div>
+
+{% endblock %}
