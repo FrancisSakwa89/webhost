@@ -1,0 +1,8 @@
+Hello {{user.username}}
+Welcome to WebHost
+You have now signed up for the web host application and can now start sharing your products to everyone.
+Good luck.
+
+
+
+*Please note that we are not responsible for any an
