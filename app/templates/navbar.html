@@ -15,26 +15,23 @@
         <div class="navbar-collapse collapse" style="padding:0px;">
             <ul class="nav navbar-nav">
                 <li style="font-size:20px;"><a href="/">WEBHOST</a></li>
+                <li style="font-size:20px;"><a href="/about">About Us</a></li>
+        <li style="font-size:20px;"><a href="/contact">Contact Us</a></li>
+
         </div>
         
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right" style="height: 50px;font-size: 1.3em">
                 {% if current_user.is_authenticated %}
-                <li style="color:white;padding:18px;font-family: 'Lobster', cursive;"><H3>{{current_user.username}}</H3></li>
-                <li class="pro"><a href="{{url_for('main.profile',uname=current_user.username)}}"><H3>profile</H3></a></li>
-                <li><a href="{{url_for('auth.logout')}}"><H3>Sign out</H3></a></li>
-                {% else %}
-                <li><a href="{{url_for('main.subscribe')}}"><h3>Subscribe</h3></a></li>
-
-                <li><a href="{{url_for('auth.register')}}"><H3>Register</H3></a></li>
-                <li><a href="{{url_for('auth.login')}}"><H3>Sign in</H3></a></li>
+                <li style="color:white;padding:18px;font-family: 'Lobster', cursive;"><i>{{current_user.username}}</i></li>
+                <li class="pro"><a href="{{url_for('main.profile',uname=current_user.username)}}"><i>profile</i></a></li>
+                <li><a href="{{url_for('auth.logout')}}"><i>Sign out</i></a></li>
 
                 {%endif%}
               </ul>
-
+     
 
 
     </div>
 
 </div>
-
-
+  
