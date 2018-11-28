@@ -1,12 +1,11 @@
 {% extends 'base.html'%}
 
 {% block content %}
-<<<<<<< HEAD
-<div class="container" style="
-background: linear-gradient(to right, #232526, #414345); ">
+<div class="container-fluid" style="
+background: linear-gradient(to right, #2295cf, #3089e2); ">
 <div class="row">
 <!-- displaying  Username-->
-  <div class="col-md-4">
+  <div class="col-md-6">
     <h3 style="text-decoration-style: underline; color: whitesmoke"> {{user.username| capitalize}} </h3>
 
     <!--Displaying user bio-->
@@ -14,9 +13,9 @@ background: linear-gradient(to right, #232526, #414345); ">
       <p style="color: whitesmoke"> {{user.bio}}</p>
     {%else%}
       <p style="color: white"> {{user.username| capitalize}} has no upto date data </p>
-    {% endif %}
+    {% endif %}<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     {% if user == current_user %}
-    <a href="{{url_for('main.update_profile',uname=user.username)}}" style="color: green">Edit profile</a>
+    <a href="{{url_for('main.update_profile',uname=user.username)}}" style="color: black;font-size: 30px">Edit profile</a>
 {% endif %}
   </div>
 
@@ -32,8 +31,8 @@ background: linear-gradient(to right, #232526, #414345); ">
   {% if user == current_user %}
   <form  action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype = "multipart/form-data">
 
-    <input type="file"  name="photo"  required  style="background-color: blueviolet; height: 30px;color: whitesmoke">
-    <input type="submit" class="btn btn-warning">
+    <input type="file"  name="photo"  required  style="background-color: rgb(56, 150, 52); height: 30px;color: whitesmoke">
+    <input type="submit" class="btn btn-success">
   </form>
     {% endif %}
 </div>
@@ -42,51 +41,3 @@ background: linear-gradient(to right, #232526, #414345); ">
 
 
 {% endblock %}
-=======
-<div class="container">
-    <div class="row">
-        <!-- displaying  Username-->
-        <h3> {{user.username| capitalize}} </h3>
-        <hr>
-        <!--Display profile photo-->
-        <div class="col-md-3">
-            <div class="thumbnail">
-                {% if user.profile_pic_path %}
-                <img class="" src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
-                {%else%}
-                <p>No profile picture</p>
-                {% endif %}
-
-                {% if user == current_user %}
-                <form action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype="multipart/form-data">
-                    <input type="file" name="photo" class="form-control" required>
-                    <input type="submit">
-                </form>
-                    {% endif %}
-            </div>
-        </div>
-        <div class="col-md-9">
-            <p>Name: {{user.firstname}} {{user.lastname}} </p>
-            <p>No of Ads Posted: {{posts}}</p>
-            <p>Date joined: {{date}}</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-          <h3> Description </h3>
-
-          <!--Displaying user product description-->
-          {% if user.description %}
-            <p> {{user.description}}</p>
-          {%else%}
-            <p> {{user.username| capitalize}} has no description </p>
-          {% endif %}
-
-          {% if user == current_user %}
-          <a href="{{url_for('main.update_profile',uname=user.username)}}">Edit instituitions profile</a>
-          {% endif %}
-        </div>
-    </div>
-</div>
-{% endblock %}
->>>>>>> search
