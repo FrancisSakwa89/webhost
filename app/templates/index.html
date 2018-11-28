@@ -28,24 +28,7 @@
         </nav>       
 
   <body>  
-    <!-- Header Section Start -->
-    <div class="header">    
-      <nav class="navbar navbar-default main-navigation" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <!-- Stat Toggle Nav Link For Mobiles -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- End Toggle Nav Link For Mobiles -->
-            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo.png" alt=""></a>
-          </div>
-          <!-- brand and toggle menu for mobile End -->
-
-          <!-- Navbar Start -->
+    
           <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="{{url_for('auth.login')}}"><i class="lnr lnr-enter"></i> Login</a></li>
@@ -59,6 +42,7 @@
           <!-- Navbar End -->
         </div>
       </nav>
+      
           
       </div>
       <div id="myCarousel" class="carousel slide" data-ride="carousel" >
@@ -102,7 +86,7 @@
       <div class="overlay">
         <div class="container">
           <div class="main-text">
-            <h1 class="intro-title">Welcome To <span style="color: #3498DB">WEBHOST</span></h1>
+            <h1 class="intro-title" s>Welcome To <span style="color: #3498DB">WEBHOST</span></h1>
             <p class="sub-title">SEARCH FOR YOUR WEBS HERE</p>
 
             <!-- Start Search box -->
@@ -114,7 +98,7 @@
                       <label class="styled-select">
                         <select class="dropdown-product selectpicker" name="product-cat" >
                           <option value="0"> Categories</option>
-                          <option class="Entertainment" value="community"> Entertainment</option>
+                          <option class="Entertainment"  href="contact.html" value="community"> Entertainment</option>
                           <option value=" Education"> Education</option>
                           <option value="Sports"> Sports</option>
                           <option value="Bussiness"> Bussiness</option>
@@ -131,7 +115,7 @@
                       <label class="styled-select location-select">
                         <select class="dropdown-product selectpicker" name="product-cat" >
                           <option value="0">All Locations</option>
-                          <option value="Kenya">Kenya</option>
+                          <option value="Kenya"  href="contact.html">Kenya</option>
                           <option value="Tanzania">Tanzania</option>
                           <option value="Uganda">Uganda</option>
                           <option value="Rwanda">Rwanda</option>
@@ -174,8 +158,8 @@
     	</div>
     
       <div class="bottom-social-icons social-icon pull-right">  
-          <a href="#" class="fa fa-facebook"></a>
-          <a href="#" class="fa fa-twitter"></a>
+          <a href="https://web.facebook.com/Francis Sakwa" class="fa fa-facebook"></a>
+          <a href="https://web.twitter.com/Francis Sakwa" class="fa fa-twitter"></a>
       </div>
 
    {% endblock %}
