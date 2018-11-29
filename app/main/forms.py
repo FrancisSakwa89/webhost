@@ -22,4 +22,4 @@ class CommentForm(FlaskForm):
 class SubscribeForm(FlaskForm):
     username = StringField('Your Name', validators=[DataRequired()])
     email = StringField('Your Email Address',validators=[Required(),Email()])
-    submit = SubmitField('Submit')
+    submit = SubmitField('Subscribe')

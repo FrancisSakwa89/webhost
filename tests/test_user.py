@@ -1,5 +1,6 @@
 import unittest
 from app.models import User
+<<<<<<< HEAD
 from app import db
 
 
@@ -22,3 +23,19 @@ class UserModelTest(unittest.TestCase):
         test to check if password is being hashed
         '''
         self.assertTrue(self.new_user.password_hash is not None)
+=======
+
+class UserTest(unittest.TestCase):
+    '''
+    Test Class to test the behaviour of the User class
+    '''
+
+    def setUp(self):
+        '''
+        Set up method that will run before every Test
+        '''
+        self.new_user = User()
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_user,User))
+>>>>>>> landing
