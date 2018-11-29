@@ -47,7 +47,7 @@
 
           <!-- Navbar Start -->
           <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" style="background-color: skyblue;">
               <li><a href="{{url_for('auth.login')}}"><i class="lnr lnr-enter"></i> Login</a></li>
               <li><a href="{{url_for('main.subscribe')}}"><i class="lnr lnr-user"></i> Subscribe</a></li>
               <li><a href="{{url_for('auth.register')}}"><i class="lnr lnr-user"></i> Signup</a></li>
@@ -58,11 +58,14 @@
         </div>
       </nav>
         
+
+      
       <style>
             body,html {
               height: 100%;
               background-image: url("https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cf59cfff9399296e408b5a13a8d26308&auto=format&fit=crop&w=500&q=60");
-              background-size: cover;
+              background-size: 1100px 1000px;
+              position: static;
             }
             </style>
 
@@ -101,4 +104,16 @@
           </a>
         </div>
         <hr>
+        <div class="animated slideInLeft">
+        <div class="panel jumbotron" style="background-color: whitesmoke;margin-right: 20%;margin-left: 20%;color: black;text-align: center">
+            <h1 style="text-decoration: underline; ">ABOUT US</h1>
+            <p>. We are all about giving you good time</p>
+           <p>. We’re a new breed of technology company aiming software innovation and service.</p> 
+               <p>. Our platform provides a platform for brands to post their websites and links they need.</p>
+               <p>. By doing this they create  awarness of their remarkable sites and apps on Webhost that drive their business forward faster.</p>
+               <p>. All this is driven by a set of core values that guides us every day.</p>
+
+        </div>
+        </div>
+    
         {%endblock%}
