@@ -3,82 +3,85 @@
 <html>
 
 <head>
-    <meta charset="utf-8"> {% if title %}
-    <title> {{ title }}</title>
-    {% else %}
-    <title> WEBHOST </title>
-    {% endif %}
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Noto+Sans+SC" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Noto+Sans+SC|Pacifico" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
+  <meta charset="utf-8"> {% if title %}
+  <title> {{ title }}</title>
+  {% else %}
+  <title> WEBHOST </title>
+  {% endif %}
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Noto+Sans+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Noto+Sans+SC|Pacifico" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 {% extends 'base.html'%} {% import "bootstrap/wtf.html" as wtf %}
 
 <body>
 
-        {% block styles%}
-        {{ super() }}
-        <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-        {% endblock %}
-        
+  {% block styles%}
+  {{ super() }}
+  <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+  {% endblock %}
 
-    {% block content %}   
 
-</div> 
-        </nav>       
+  {% block content %}
 
-  <body>  
-    
-          <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="{{url_for('auth.login')}}"><i class="lnr lnr-enter"></i> Login</a></li>
-              <li><a href="{{url_for('main.subscribe')}}"><i class="lnr lnr-user"></i> Subscribe</a></li>
-              <li><a href="{{url_for('auth.register')}}"><i class="lnr lnr-user"></i> Signup</a></li>
-              <li class="postadd">
-                <a class="btn btn-danger btn-post" href="post-ads.html"><span class="fa fa-plus-circle"></span> Post an Ad</a>
-              </li>
-            </ul>
-          </div>
-          <!-- Navbar End -->
+  </div>
+  </nav>
+
+  <body>
+
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{url_for('auth.login')}}"><i class="lnr lnr-enter"></i> Login</a></li>
+        <li><a href="{{url_for('main.subscribe')}}"><i class="lnr lnr-user"></i> Subscribe</a></li>
+        <li><a href="{{url_for('auth.register')}}"><i class="lnr lnr-user"></i> Signup</a></li>
+        <li class="postadd">
+          <a class="btn btn-danger btn-post" href="post-ads.html"><span class="fa fa-plus-circle"></span> Post an Ad</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Navbar End -->
+    </div>
+    </nav>
+
+
+    </div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" style="margin-left: 40%;height: 180px">
+        <div class="item active">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5wgjFBwr0d_8oNxwOvW1dK5xZt-AtHxitLJdddJW1c6lRZDi95Q"
+            alt="">
         </div>
-      </nav>
-      
-          
+
+        <div class="item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLxxEbv1MQEdOyzob_VNp7RBwjZ5J4KayiDMAlWIpwxZS_1OxpmQ"
+            alt="">
+        </div>
+
+        <div class="item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ2_PnAAebD85g-xYW6zqbyZzozxhIpMYluX7ve_-90YfAOh9EFg"
+            alt="">
+        </div>
       </div>
-      <div id="myCarousel" class="carousel slide" data-ride="carousel" >
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
-        
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" style="margin-left: 40%;height: 180px" >
-            <div class="item active">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5wgjFBwr0d_8oNxwOvW1dK5xZt-AtHxitLJdddJW1c6lRZDi95Q" alt="">
-            </div>
-        
-            <div class="item">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLxxEbv1MQEdOyzob_VNp7RBwjZ5J4KayiDMAlWIpwxZS_1OxpmQ" alt="">
-            </div>
-        
-            <div class="item">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ2_PnAAebD85g-xYW6zqbyZzozxhIpMYluX7ve_-90YfAOh9EFg" alt="">
-            </div>
-          </div>
-        
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-        <hr>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <hr>
     <!-- Header Section End -->
 
     <!-- Start intro section -->
@@ -87,7 +90,7 @@
         <div class="container">
           <div class="main-text">
             <h1 class="intro-title" s>Welcome To <span style="color: #3498DB">WEBHOST</span></h1>
-            <p class="sub-title">SEARCH FOR YOUR WEBS HERE</p>
+            <p class="sub-title">SEARCH FOR YOUR WEB LISTINGS HERE</p>
 
             <!-- Start Search box -->
             <div class="row search-bar">
@@ -96,32 +99,29 @@
                   <div class="col-md-3 col-sm-6 search-col">
                     <div class="input-group-addon search-category-container">
                       <label class="styled-select">
-                        <select class="dropdown-product selectpicker" name="product-cat" >
+                        <select class="dropdown-product selectpicker" name="product-cat">
                           <option value="0"> Categories</option>
-                          <option class="Entertainment"  href="contact.html" value="community"> Entertainment</option>
-                          <option value=" Education"> Education</option>
-                          <option value="Sports"> Sports</option>
-                          <option value="Bussiness"> Bussiness</option>
-                          <option value="Enterprenuership"> Enterprenuership</option>
-                          <option value="Relationships"> Relationships</option>
-                          <option value="Hotel Services">  Hotel Services</option>
+                          <option class="Medicine" href="contact.html" value="community"></option> Medicine</option>
+                          <option value=" Engineering"> Engineering</option>
+                          <option value="Education"> Education</option>
+                          <option value="Hotel Services"> Hotel Services</option>
                           <option value="Tourism">Tourism</option>
-                        </select>                                    
+                        </select>
                       </label>
                     </div>
                   </div>
                   <div class="col-md-3 col-sm-6 search-col">
                     <div class="input-group-addon search-category-container">
                       <label class="styled-select location-select">
-                        <select class="dropdown-product selectpicker" name="product-cat" >
+                        <select class="dropdown-product selectpicker" name="product-cat">
                           <option value="0">All Locations</option>
-                          <option value="Kenya"  href="contact.html">Kenya</option>
+                          <option value="Kenya" href="contact.html">Kenya</option>
                           <option value="Tanzania">Tanzania</option>
                           <option value="Uganda">Uganda</option>
                           <option value="Rwanda">Rwanda</option>
                           <option value="Burundi">Burundi</option>
                           <option value="Somalia">Somalia</option>
-                        </select>                                    
+                        </select>
                       </label>
                     </div>
 
@@ -144,23 +144,22 @@
     </section>
     <hr>
     <div id="copyright">
-    		<div class="container">
-    			<div class="row">
-    				<div class="col-md-12">
-              <div class="site-info pull-right">
-                <p>All copyrights reserved @ 2018 - Design & Development by <a rel="nofollow" href="https://web.facebook.com/Francis Sakwa">Webhost</a></p>
-              </div>    					
-              
-              </div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    
-      <div class="bottom-social-icons social-icon pull-right">  
-          <a href="https://web.facebook.com/Francis Sakwa" class="fa fa-facebook"></a>
-          <a href="https://web.twitter.com/Francis Sakwa" class="fa fa-twitter"></a>
-      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="site-info pull-right">
+              <p>All copyrights reserved @ 2018 - Design & Development by <a rel="nofollow" href="https://web.facebook.com/Francis Sakwa">Webhost</a></p>
+            </div>
 
-   {% endblock %}
-          
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="bottom-social-icons social-icon pull-right">
+      <a href="https://web.facebook.com/Francis Sakwa" class="fa fa-facebook"></a>
+      <a href="https://web.twitter.com/Francis Sakwa" class="fa fa-twitter"></a>
+    </div>
+
+    {% endblock %}
