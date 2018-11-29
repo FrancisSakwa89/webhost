@@ -24,11 +24,11 @@
         <div>
                 
         
-        <ul class="nav navbar-nav navbar-right" style="height: 50px;font-size: 1.3em">
+        <ul class="nav navbar-nav navbar-right" style="height: 56px;font-size: 1.3em">
                 {% if current_user.is_authenticated %}
                 <li style="color:white;padding:18px;font-family: 'Lobster', cursive;"><i>{{current_user.username}}</i></li>
-                <li class="pro"><a href="{{url_for('main.profile',uname=current_user.username)}}"><i>profile</i></a></li>
-                <li><a href="{{url_for('auth.logout')}}"><i>Sign out</i></a></li>
+                <li class="pro"><span class="glyphicon glyphicon-user"></span><a href="{{url_for('main.profile',uname=current_user.username)}}"><i>Profile</i></a></li>
+                <li><a href="{{url_for('auth.logout')}}"><i>Log Out</i></a></li>
 
                 {%endif%}
               </ul>

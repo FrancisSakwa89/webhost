@@ -105,3 +105,46 @@ class Subscriber(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     username = db.Column(db.String(255),unique = True)
     email = db.Column(db.String(255),unique = True,index = True)
+
+
+class Login(db.Model):
+    __tablename__ = 'login'
+
+    id = db.Column(db.Integer,primary_key = True)
+    username = db.Column(db.String(255),unique = True)
+    email = db.Column(db.String(255),unique = True,index = True)
+
+class Logout(db.Model):
+    __tablename__ = 'logout'
+
+    id = db.Column(db.Integer,primary_key = True)
+    username = db.Column(db.String(255),unique = True)
+    email = db.Column(db.String(255),unique = True,index = True)
+
+class Register(db.Model):
+    __tablename__ = 'register'
+
+    id = db.Column(db.Integer,primary_key = True)
+    username = db.Column(db.String(255),unique = True)
+    email = db.Column(db.String(255),unique = True,index = True)
+
+class Signup(db.Model):
+    __tablename__ = 'signup'
+
+    id = db.Column(db.Integer,primary_key = True)
+    username = db.Column(db.String(255),unique = True)
+    email = db.Column(db.String(255),unique = True,index = True)
+
+class Password(db.Model):
+    __tablename__ = 'password'
+
+    id = db.Column(db.Integer,primary_key = True)
+    username = db.Column(db.String(255),unique = True)
+    email = db.Column(db.String(255),unique = True,index = True)
+
+class View_comment(db.Model):
+    __tablename__ = 'view_comment'
+
+    id = db.Column(db.Integer,primary_key = True)
+    username = db.Column(db.String(255),unique = True)
+    email = db.Column(db.String(255),unique = True,index = True)
