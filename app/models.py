@@ -148,3 +148,10 @@ class View_comment(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     username = db.Column(db.String(255),unique = True)
     email = db.Column(db.String(255),unique = True,index = True)
+
+class Get_comment(db.Model):
+    __tablename__ = 'get_comment'
+
+    id = db.Column(db.Integer,primary_key = True)
+    username = db.Column(db.String(255),unique = True)
+    email = db.Column(db.String(255),unique = True,index = True)    
