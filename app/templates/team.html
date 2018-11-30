@@ -46,14 +46,14 @@
           <!-- brand and toggle menu for mobile End -->
 
           <!-- Navbar Start -->
-          <div class="collapse navbar-collapse" id="navbar" >
+          <!-- <div class="collapse navbar-collapse" id="navbar" >
                 <ul class="nav navbar-nav navbar-right" style="background-color:skyblue;">
                   <li><a href="{{url_for('auth.login')}}"><i class="lnr lnr-enter"></i> Login</a></li>
                   <li><a href="{{url_for('main.subscribe')}}"><i class="lnr lnr-user"></i> Subscribe</a></li>
                   <li><a href="{{url_for('auth.register')}}"><i class="lnr lnr-user"></i> Signup</a></li>
                   
                 </ul>
-              </div>
+              </div> -->
           <!-- Navbar End -->
         </div>
       </nav>
@@ -61,7 +61,7 @@
       <style>
             body,html {
               height: 100%;
-              background-image: url("https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cf59cfff9399296e408b5a13a8d26308&auto=format&fit=crop&w=500&q=60");
+              /* background-image: url("https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cf59cfff9399296e408b5a13a8d26308&auto=format&fit=crop&w=500&q=60"); */
               background-size: 1100px 1000px;
               position: static;
             }
@@ -70,8 +70,22 @@
       <h1 class="animated slideInRight " style="text-align: center;color: skyblue">TEAM</h1>
       <div class="animated slideInUp">
       <div class="" style="background-color: whitesmoke;margin-right: 20%;margin-left: 20%;color: black;text-align: center">
-            <h1 style="text-decoration: underline">THIS IS OUR TEAM</h1>
-            <img src="/static/images/franco.jpg" height="300px;width=100px">
+            <h1>THIS IS OUR TEAM</h1>
+            <div class="row">
+              <div class="col-md-3">
+                  <img src="../static/images/franco.jpg" height="300px;width=100px">
+              </div>
+              
+              <div class="col-md-3">
+                  <img src="../static/images/elias.jpg" height="300px;width=100px">
+              </div>
+              <div class="col-md-3">
+                  <img src="/static/images/cynthia.jpg" height="300px;width=100px">
+              </div>
+              <div class="col-md-3">
+                  <img src="/static/images/vynnel.jpg" height="300px;width=100px">
+            </div>
+
           
       </div>
     </div>

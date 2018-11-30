@@ -1,46 +1,49 @@
 <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Lobster" rel="stylesheet">
 
-<div class="navbar navbar-inverse" role="navigation" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364);">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+<div class="container-fluid">
+    <div class="navbar navbar-inverse" role="navigation" style="background: linear-gradient(to right, rgb(28, 174, 241), #2c5364, #203a43);">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">  
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar" style="font-size: 1.6 em">
+                <ul class="nav navbar-nav navbar-right" style="background-color: rgb(33, 62, 78); font-size: 1.6 em">
+                    <li style="font-size: 1.6 em"><a href="{{url_for('auth.login')}}"><i class="glyphicon glyphicon-log-in"></i>
+                            Login</a></li>
+                    <li><a href="{{url_for('main.subscribe')}}"><i class="glyphicon glyphicon-user"></i> Subscribe</a></li>
+                    <li><a href="{{url_for('auth.register')}}"><i class="lnr lnr-user"></i> Signup</a></li>
+
+                </ul>
+            </div>
+            <div class="navbar-collapse collapse" style="padding:0px;">
+                <ul class="nav navbar-nav">
+                    <li style="font-size:20px;"><a href="/">WEBHOST</a></li>
+                    <li style="font-size:20px;"><a href="/about">About Us</a></li>
+                    <li style="font-size:20px;"><a href="/contact">Contact Us</a></li>
+                    <li style="font-size:20px;"><a href="/team">Our Team</a></li>
+                    <li style="font-size:20px;"><a href="/core">Core Values</a></li>
+
+            </div>
+            <div>
+
+
+                <ul class="nav navbar-nav navbar-right" style="height: 56px;font-size: 1.3em">
+                    {% if current_user.is_authenticated %}
+                        <li style="color:blue;padding:18px;font-family: 'Lobster', cursive;"><i>{{current_user.username}}</i></li>
+                    <li class="pro"><span class="glyphicon glyphicon-user"></span><a href="{{url_for('main.profile',uname=current_user.username)}}"><i>Profile</i></a></li>
+                    <li><a href="{{url_for('auth.logout')}}"><i>Log Out</i></a></li>
+
+                    {%endif%}
+                </ul>
+
+
+
+            </div>
+
         </div>
-        <div class="collapse navbar-collapse" id="navbar" style="font-size: 1.6 em">
-            <ul class="nav navbar-nav navbar-right" style="background-color: rgb(33, 62, 78); font-size: 1.6 em">
-                <li style="font-size: 1.6 em"><a href="{{url_for('auth.login')}}"><i class="glyphicon glyphicon-log-in"></i>
-                        Login</a></li>
-                <li><a href="{{url_for('main.subscribe')}}"><i class="glyphicon glyphicon-user"></i> Subscribe</a></li>
-                <li><a href="{{url_for('auth.register')}}"><i class="lnr lnr-user"></i> Signup</a></li>
-
-            </ul>
-        </div>
-        <div class="navbar-collapse collapse" style="padding:0px;">
-            <ul class="nav navbar-nav">
-                <li style="font-size:20px;"><a href="/">WEBHOST</a></li>
-                <li style="font-size:20px;"><a href="/about">About Us</a></li>
-                <li style="font-size:20px;"><a href="/contact">Contact Us</a></li>
-                <li style="font-size:20px;"><a href="/team">Our Team</a></li>
-                <li style="font-size:20px;"><a href="/core">Core Values</a></li>
-
-        </div>
-        <div>
-
-
-            <ul class="nav navbar-nav navbar-right" style="height: 56px;font-size: 1.3em">
-                {% if current_user.is_authenticated %}
-                <li style="color:white;padding:18px;font-family: 'Lobster', cursive;"><i>{{current_user.username}}</i></li>
-                <li class="pro"><span class="glyphicon glyphicon-user"></span><a href="{{url_for('main.profile',uname=current_user.username)}}"><i>Profile</i></a></li>
-                <li><a href="{{url_for('auth.logout')}}"><i>Log Out</i></a></li>
-
-                {%endif%}
-            </ul>
-
-
-
-        </div>
-
     </div>
+</div>
