@@ -169,3 +169,10 @@ class Update_post(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     username = db.Column(db.String(255),unique = True)
     email = db.Column(db.String(255),unique = True,index = True)      
+
+class Delete_post(db.Model):
+    __tablename__ = 'delete_post'
+
+    id = db.Column(db.Integer,primary_key = True)
+    username = db.Column(db.String(255),unique = True)
+    email = db.Column(db.String(255),unique = True,index = True)      
